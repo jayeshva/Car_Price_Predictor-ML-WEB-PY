@@ -16,15 +16,35 @@
       <form method="post" accept-charset="utf-8" name="Modelform">
        
         <div class="inputfield">
-          <label>Gender</label>
+          <label>Car Company :</label>
           <div class="custom_select">
-            <select>
-              <option value="">Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+            <select name="company" required="1"  onchange="load_car_models(this.id,'car_models')">
+              {% for company in companies %}
+              <option value="{{ company }}">{{ company }}</option>
+              {% endfor %}
             </select>
           </div>
        </div> 
+       <div class="inputfield">
+        <label>Car Company :</label>
+        <div class="custom_select">
+          <select name="company" required="1"  onchange="load_car_models(this.id,'car_models')">
+            {% for company in companies %}
+            <option value="{{ company }}">{{ company }}</option>
+            {% endfor %}
+          </select>
+        </div>
+     </div> 
+     <div class="inputfield">
+      <label>Car Company :</label>
+      <div class="custom_select">
+        <select name="company" required="1"  onchange="load_car_models(this.id,'car_models')">
+          {% for company in companies %}
+          <option value="{{ company }}">{{ company }}</option>
+          {% endfor %}
+        </select>
+      </div>
+   </div> 
        <div class="inputfield">
        <button  class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>
        </div>
