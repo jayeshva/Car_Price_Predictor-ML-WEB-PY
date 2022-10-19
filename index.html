@@ -26,9 +26,9 @@
           </div>
        </div> 
        <div class="inputfield">
-        <label>Car Company :</label>
+        <label>Car Model :</label>
         <div class="custom_select">
-          <select name="company" required="1"  onchange="load_car_models(this.id,'car_models')">
+          <select id="car_models" name="car_models" required="1" >
             {% for company in companies %}
             <option value="{{ company }}">{{ company }}</option>
             {% endfor %}
@@ -36,7 +36,7 @@
         </div>
      </div> 
      <div class="inputfield">
-      <label>Car Company :</label>
+      <label>Car Year of Purchase :</label>
       <div class="custom_select">
         <select name="company" required="1"  onchange="load_car_models(this.id,'car_models')">
           {% for company in companies %}
@@ -44,11 +44,24 @@
           {% endfor %}
         </select>
       </div>
-   </div> 
-       <div class="inputfield">
-       <button  class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>
-       </div>
-       
+     </div>
+      <div class="inputfield">
+      <label>Car Fuel Type :</label>
+      <div class="custom_select">
+        <select id="fuel_type" name="fuel_type" required="1" >
+          {% for fuel in fuel_types %}
+          <option value="{{ fuel }}">{{ fuel }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      </div>
+      <div class="inputfield">
+        <label>Car Kilometres Driven :</label>
+        <input type="text"  id="kilo_driven" name="kilo_driven" placeholder="Enter the kilometres driven "class="input">
+     </div> 
+     <div class="inputfield">
+     <button  class="btn" onclick="send_data()">Predict Price</button>
+    </div>
       </form>
       <BR><BR>
         <h4><span id="prediction"></span></h4>
