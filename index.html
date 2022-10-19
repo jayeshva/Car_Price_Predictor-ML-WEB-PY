@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Price Predictor</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Enter The Vehicle Details
+    </div>
+    <div class="form">
+      <form method="post" accept-charset="utf-8" name="Modelform">
+       
+        <div class="inputfield">
+          <label>Gender</label>
+          <div class="custom_select">
+            <select>
+              <option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+       <button  class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>
+       </div>
+       
+      </form>
+      <BR><BR>
+        <h4><span id="prediction"></span></h4>
+        
+    </div>
+</div>	
+	
+</body>
+</html>
